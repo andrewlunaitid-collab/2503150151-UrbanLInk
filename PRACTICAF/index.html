@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanLink</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <header>
+        <h1>UrbanLink</h1>
+        <p>Reporta, da seguimiento y mejora tu comunidad: cuéntanos qué problema ves en tu calle y entérate de cómo avanza su atención.</p>
+    </header>
+
+    
+    <main>
+        <section id="inicio" class="pantalla activa">
+            <h2>Bienvenido</h2>
+            <p>Usa la barra de abajo para crear un reporte, ver el estado de los que ya enviaste, revisar las categorías o pedir ayuda.</p>
+        </section>
+
+        <section id="nuevo" class="pantalla">
+            <h2>Nuevo reporte</h2>
+            <form id="miFormulario">
+                <div class="campo">
+                    <label for="categoria">Categoría</label>
+                    <select id="categoria" required>
+                        <option value="">Selecciona...</option>
+                        <option>Basura</option>
+                        <option>Fuga de agua</option>
+                        <option>Alumbrado</option>
+                        <option>Baches</option>
+                        <option>Áreas verdes</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" id="descripcion" placeholder="¿Qué está pasando y dónde?" required>
+                </div>
+
+                <div class="campo">
+                    <label for="nombre">Tu nombre</label>
+                    <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="resultado"></p>
+        </section>
+
+        <section id="mis" class="pantalla">
+            <h2>Mis reportes</h2>
+            <ul id="lista"></ul>
+        </section>
+
+        <section id="categorias" class="pantalla">
+            <h2>Categorías</h2>
+            <ul class="categorias">
+                <li><strong>Baches</strong>Hoyos o daños en el pavimento.</li>
+                <li><strong>Fuga de agua</strong>Tuberías rotas o agua tirada en la calle.</li>
+                <li><strong>Alumbrado</strong>Lámparas fundidas o postes sin luz.</li>
+                <li><strong>Basura</strong>Acumulación de residuos o tiraderos.</li>
+                <li><strong>Áreas verdes</strong>Parques, árboles o jardines descuidados.</li>
+            </ul>
+        </section>
+
+        <section id="ayuda" class="pantalla">
+            <h2>Ayuda</h2>
+            <p>¿Dudas? Toca "Nuevo reporte" en la barra de abajo, llena el formulario y presiona Enviar. Después revisa tu reporte en "Mis reportes".</p>
+        </section>
+    </main>
+
+
+    <nav class="menu">
+        <div class="cuadro seleccionado" data-destino="inicio"></span>Inicio</div>
+        <div class="cuadro" data-destino="nuevo"></span>Nuevo reporte</div>
+        <div class="cuadro" data-destino="mis"></span>Mis reportes</div>
+        <div class="cuadro" data-destino="categorias"></span>Categorías</div>
+        <div class="cuadro" data-destino="ayuda"></span>Ayuda</div>
+    </nav>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
